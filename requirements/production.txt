@@ -1,0 +1,5 @@
+celery==4.1.0
+Django==2.0
+psycopg2==2.7.3.2
+PyGithub==1.35
+social-auth-app-django==2.0.0
