@@ -151,3 +151,7 @@ SOCIAL_AUTH_GITHUB_KEY = '89f562d3483fceb4c896'
 SOCIAL_AUTH_GITHUB_SECRET = 'b70151e3601db168375af3ccad8ddc57f2bd9885'
 SOCIAL_AUTH_GITHUB_SCOPE = ['repo', 'user:email', ]
 
+try:
+    from .local_settings import *
+except ImportError:
+    pass
