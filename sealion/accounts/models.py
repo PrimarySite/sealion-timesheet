@@ -51,6 +51,9 @@ class Repository(models.Model):
 class Event(models.Model):
     """Github Events."""
 
+    class Meta:
+        ordering = ['-created_at']
+
     event_type = models.CharField(max_length=32)
     github_id = models.CharField(max_length=32)
     created_at = models.DateTimeField(null=True, default=timezone.now)

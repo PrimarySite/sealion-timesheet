@@ -26,8 +26,19 @@ class AuthUserAdmin(UserAdmin):
     ), )
 
 
+class EventAdmin(admin.ModelAdmin):
+    """Customize Event Admin."""
+
+    date_hierarchy = 'created_at'
+
+    list_display = (
+        'user',
+        'repository',
+        'event_type',
+        'created_at')
+
 admin.site.register(User, AuthUserAdmin)
 admin.site.register(Membership)
 admin.site.register(Organization)
 admin.site.register(Repository)
-admin.site.register(Event)
+admin.site.register(Event, EventAdmin)
